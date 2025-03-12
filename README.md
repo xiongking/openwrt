@@ -1,17 +1,14 @@
-# openwrt
-the latest available release of openwrt-x86-64 for docker;
+# Github: 
 
-最新OpenWRT-X86-64官方纯净版镜像 
-
-<https://hub.docker.com/r/daxiong828/openwrt>
+<https://github.com/xiongking/openwrt/>
 
 Openwrt-x86-64 for docker，Compiled directly from the official pure version of the image.
 
 OpenWRT-X86-64，编译自官方纯净版镜像docker版
 
-the latest image version is : 22.03.5
+the latest image version is : 24.10.0
 
-最新镜像版本号：22.03.5
+最新镜像版本号：24.10.0
 
 Check the latest version number: <https://downloads.openwrt.org/>
 
@@ -46,7 +43,7 @@ docker run -d --restart unless-stopped --network macvlan_proxy --privileged --na
 ```
 openwrt:
  container_name: openwrt
- image: daxiong828/openwrt
+ image: daxiong828/openwrt:latest
  restart: always
  command: /sbin/init
  privileged: true
@@ -56,7 +53,7 @@ openwrt:
       - TZ=$TZ
     networks:
       macvlan_proxy:
-        ipv4_address: 10.0.0.100<your route IP 这里是网关ip>
+        ipv4_address: 10.0.0.100 <your route IP 这里是网关ip>
 ```
 ## enter the docker
 
